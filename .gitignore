@@ -1,0 +1,24 @@
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# Temporary and log files
+*.log
+*.tmp
+*.out
+*.env
+.DS_Store
+
+# Add any other large directories or files you want to ignore
+temp/
+src/agent/library/temp
+out.txt
+
+keys.json
+# Ignore all histories in bots subdirectories
+bots/*/histories/
+
