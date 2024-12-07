@@ -22,3 +22,7 @@ keys.json
 # Ignore all histories in bots subdirectories
 bots/*/histories/
 
+# Ignore shell scripts and text files
+*.sh
+*.txt
+
