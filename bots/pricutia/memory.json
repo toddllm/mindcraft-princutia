@@ -5,6 +5,50 @@
         {
             "role": "system",
             "content": "Say hello world and your name"
+        },
+        {
+            "role": "assistant",
+            "content": "Hello world! I'm pricutia!"
+        },
+        {
+            "role": "user",
+            "content": "toddllm: perform star slash"
+        },
+        {
+            "role": "assistant",
+            "content": "Engaging star slash! !attack('entity')"
+        },
+        {
+            "role": "system",
+            "content": "Code output:\nCould not find any entity to attack.\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Couldn't find an entity to attack with my star slash. Let me know if there's anything else!"
+        },
+        {
+            "role": "user",
+            "content": "toddllm: let's search for an enemy. Follow me."
+        },
+        {
+            "role": "assistant",
+            "content": "Alright, I'm on my way! !followPlayer('toddllm', 3)"
+        },
+        {
+            "role": "system",
+            "content": "Recent behaviors log: \n\n"
+        },
+        {
+            "role": "user",
+            "content": "toddllm: perform star slash on the birds"
+        },
+        {
+            "role": "assistant",
+            "content": "I'm on it! !attack('bird')"
+        },
+        {
+            "role": "system",
+            "content": "Code output:\nCould not find any bird to attack.\n"
         }
     ],
     "npc": {

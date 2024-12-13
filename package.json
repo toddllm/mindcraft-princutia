@@ -26,8 +26,8 @@
   },
   "scripts": {
     "start": "node main.js",
-    "test:unit": "npx mocha --timeout 10000 src/tests/unit/test_initial.cjs --reporter spec --exit",
-    "test:integration": "npx mocha --timeout 30000 src/tests/integration/test_connect.cjs --reporter spec --exit",
+    "test:unit": "npx mocha --timeout 10000 src/tests/unit/test_initial.js --reporter spec --exit",
+    "test:integration": "npx mocha --timeout 30000 src/tests/integration/test_connect.js --reporter spec --exit",
     "test:star": "npx mocha --timeout 10000 src/tests/unit/test_star_slash.js --reporter spec --exit",
     "test": "npm run test:unit && npm run test:integration"
   }

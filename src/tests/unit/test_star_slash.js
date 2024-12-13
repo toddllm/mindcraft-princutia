@@ -1,11 +1,11 @@
-const assert = require('assert');
-const sinon = require('sinon');
+// File: src/tests/unit/test_star_slash.js
+import { strict as assert } from 'node:assert';
+import sinon from 'sinon';
 
-// We'll mock these functions
-const { starSlash } = require('../../../src/actions/star-slash.cjs');
-const skills = require('../../../src/agent/library/skills.js');
-const world = require('../../../src/agent/library/world.js');
-const friendComm = require('../../../src/utils/friend-communication.js');
+import { starSlash } from '../../../src/actions/star-slash.js';
+import * as skills from '../../../src/agent/library/skills.js';
+import * as world from '../../../src/agent/library/world.js';
+import * as friendComm from '../../../src/utils/friend-communication.js';
 
 describe('Star Slash Feature', function() {
   let getNearbyEnemiesStub;
@@ -25,6 +25,11 @@ describe('Star Slash Feature', function() {
     getNearbyFriendsStub.restore();
     mainAttackStub.restore();
     performSupportMoveStub.restore();
+    sinon.restore();
+  });
+
+  it('should run a basic test', async () => {
+    assert.ok(true);
   });
 
   it('should return immediately if no enemies are nearby', async () => {
