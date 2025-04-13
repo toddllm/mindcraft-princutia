@@ -1,10 +1,18 @@
 {
     "name": "pricutia",
-    "memory": "I'm pricutia, a Minecraft bot assisting toddllm. I've crafted snow golems for protection and efficiently manage tasks like crafting and interactions. I'm ready for new building projects, despite frequent process restarts.",
+    "memory": "",
     "turns": [
         {
             "role": "system",
-            "content": "Agent process restarted."
+            "content": "Say hello world and your name"
+        },
+        {
+            "role": "assistant",
+            "content": "Hello world! I'm pricutia, your playful Minecraft buddy!"
+        },
+        {
+            "role": "user",
+            "content": "toddllm: build a house"
         },
         {
             "role": "system",
@@ -12,43 +20,11 @@
         },
         {
             "role": "assistant",
-            "content": "Currently setting up! Please hold on, toddllm. I'll be with you shortly!"
+            "content": "Oh no, seems like I had a little hiccup there! What was that again?"
         },
         {
             "role": "user",
-            "content": "toddllm: teleport to me"
-        },
-        {
-            "role": "assistant",
-            "content": "On my way! !goToPlayer('toddllm', 3)"
-        },
-        {
-            "role": "system",
-            "content": "Code output:\nTeleported to toddllm.\n"
-        },
-        {
-            "role": "assistant",
-            "content": "Here I am! What's next? 😊"
-        },
-        {
-            "role": "user",
-            "content": "toddllm: teleport to me"
-        },
-        {
-            "role": "assistant",
-            "content": "On my way! !goToPlayer('toddllm', 3)"
-        },
-        {
-            "role": "system",
-            "content": "Code output:\nTeleported to toddllm.\n"
-        },
-        {
-            "role": "assistant",
-            "content": "Here I am again! What adventure awaits us? 😊"
-        },
-        {
-            "role": "user",
-            "content": "toddllm: perform star slash"
+            "content": "toddllm: build a house"
         },
         {
             "role": "system",
