@@ -1,13 +1,5 @@
-import { starSlash } from '../../../src/actions/star-slash.js';
-import { checkStarSlashTrigger } from '../../../src/conditions/trigger-check.js';
-
 export async function main(bot) {
-    // Periodic check for Star Slash trigger
-    setInterval(async () => {
-        if (checkStarSlashTrigger(bot)) {
-            await starSlash(bot); // Initiates Star Slash autonomously
-        }
-    }, 5000); // Checks every 5 seconds
+    // Star Slash functionality has been disabled
 
     // Listen for whispers to assist in attacks
     bot.on('whisper', async (username, message) => {
