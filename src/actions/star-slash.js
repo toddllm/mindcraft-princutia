@@ -1,6 +1,6 @@
-import { getNearbyEnemies, mainAttack } from "../../../src/agent/library/skills.js";
-import { getNearbyFriends } from "../../../src/agent/library/world.js";
-import { performSupportMove } from "../../../src/utils/friend-communication.js";
+import { getNearbyEnemies, mainAttack } from "../agent/library/skills.js";
+import { getNearbyFriends } from "../agent/library/world.js";
+import { performSupportMove } from "../utils/friend-communication.js";
 
 
 // Helper function to simulate different ally powers
@@ -12,10 +12,14 @@ async function performAllyAttack(bot, allyName, powerName, enemy) {
 }
 
 export async function starSlash(agent) {
-    const enemies = getNearbyEnemies(agent.bot, 5);
+    // Handle both agent and bot parameters for testing
+    const bot = agent.bot || agent;
+    const username = bot.username || 'testBot';
+    
+    const enemies = getNearbyEnemies(bot, 5);
     if (enemies.length === 0) return;
 
-    console.log(`${agent.bot.username} initiates the Star Slash! The blade gleams with fierce energy.`);
+    console.log(`${username} initiates the Star Slash! The blade gleams with fierce energy.`);
 
     // Launch enemies into the air with a powerful upward slash
     // This is conceptual, as we don't have a direct API to fling entities.
@@ -23,7 +27,7 @@ export async function starSlash(agent) {
     // We'll just log that it happens.
     for (const enemy of enemies) {
         // Perform the main attack
-        await mainAttack(agent.bot, enemy);
+        await mainAttack(bot, enemy);
 
         console.log(`A brilliant arc of energy strikes ${enemy.name}, launching it into the air!`);
         // Conceptually "enemy.position.y += 5;" or call some custom effect
@@ -41,16 +45,15 @@ export async function starSlash(agent) {
         ];
 
         for (const ally of allies) {
-            await performAllyAttack(agent.bot, ally.name, ally.power, enemy);
+            await performAllyAttack(bot, ally.name, ally.power, enemy);
         }
 
         // Existing nearby friends also join in after the initial Star Slash
-        const friends = getNearbyFriends(agent.bot, 10);
+        const friends = getNearbyFriends(bot, 10);
         for (const friendEntity of friends) {
-            await performSupportMove(agent.bot, friendEntity, enemy);
+            await performSupportMove(bot, friendEntity, enemy);
         }
     }
 
     console.log(`The Star Slash concludes, leaving enemies scattered and disoriented!`);
 }
-

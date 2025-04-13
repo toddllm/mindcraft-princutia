@@ -136,6 +136,24 @@ export function getNearbyPlayers(bot, maxDistance) {
     return res;
 }
 
+export function getNearbyFriends(bot, maxDistance) {
+    if (maxDistance == null) maxDistance = 16;
+    let friends = [];
+    for (const entity of Object.values(bot.entities)) {
+        const distance = entity.position.distanceTo(bot.entity.position);
+        if (distance > maxDistance) continue;
+        if (entity.type == 'player' && entity.username != bot.username) {
+            friends.push({ entity: entity, distance: distance });
+        } 
+    }
+    friends.sort((a, b) => a.distance - b.distance);
+    let res = [];
+    for (let i = 0; i < friends.length; i++) {
+        res.push(friends[i].entity);
+    }
+    return res;
+}
+
 
 export function getInventoryStacks(bot) {
     let inventory = [];
