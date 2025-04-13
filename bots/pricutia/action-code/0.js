@@ -1,6 +1,5 @@
-// Fixed import paths
-import { starSlash } from '../../src/actions/star-slash.js';
-import { checkStarSlashTrigger } from '../../src/conditions/trigger-check.js';
+import { starSlash } from '../../../src/actions/star-slash.js';
+import { checkStarSlashTrigger } from '../../../src/conditions/trigger-check.js';
 
 export async function main(bot) {
     // Periodic check for Star Slash trigger
