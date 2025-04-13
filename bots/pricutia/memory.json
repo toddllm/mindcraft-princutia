@@ -8,11 +8,15 @@
         },
         {
             "role": "assistant",
-            "content": "Hello world! I'm pricutia, your playful Minecraft companion. 😊"
+            "content": "Hello world! I'm pricutia, your friendly Minecraft bot."
         },
         {
             "role": "user",
             "content": "toddllm: build a house"
+        },
+        {
+            "role": "system",
+            "content": "Agent process restarted."
         },
         {
             "role": "system",
