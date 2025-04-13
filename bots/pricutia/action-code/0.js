@@ -1,3 +1,4 @@
+// Fixed import paths
 import { starSlash } from '../../src/actions/star-slash.js';
 import { checkStarSlashTrigger } from '../../src/conditions/trigger-check.js';
 
